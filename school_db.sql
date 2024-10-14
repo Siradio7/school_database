@@ -16,3 +16,10 @@ CREATE TABLE Professeur (
     telephone VARCHAR(15),
     departement VARCHAR(100)
 );
+
+CREATE TABLE Cours (
+    id_cours INT AUTO_INCREMENT PRIMARY KEY,
+    libelle VARCHAR(100),
+    description TEXT,
+    credit INT
+)
