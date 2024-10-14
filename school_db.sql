@@ -22,4 +22,13 @@ CREATE TABLE Cours (
     libelle VARCHAR(100),
     description TEXT,
     credit INT
-)
+);
+
+CREATE TABLE Inscription (
+    id_inscription INT AUTO_INCREMENT PRIMARY KEY,
+    id_etudiant INT,
+    id_cours INT,
+    note DECIMAL(4, 2),
+    FOREIGN KEY (id_etudiant) REFERENCES Etudiant(id_etudiant),
+    FOREIGN KEY (id_cours) REFERENCES Cours(id_cours)
+);
