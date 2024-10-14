@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS school_db;
+
+USE school_db;
+
 CREATE TABLE Etudiant (
     id_etudiant INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(40),
