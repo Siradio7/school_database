@@ -32,3 +32,11 @@ CREATE TABLE Inscription (
     FOREIGN KEY (id_etudiant) REFERENCES Etudiant(id_etudiant),
     FOREIGN KEY (id_cours) REFERENCES Cours(id_cours)
 );
+
+CREATE TABLE ResponsableCours (
+    id_professeur INT,
+    id_cours INT,
+    FOREIGN KEY (id_professeur) REFERENCES Professeur(id_professeur),
+    FOREIGN KEY (id_cours) REFERENCES Cours(id_cours),
+    PRIMARY KEY (id_professeur, id_cours)
+);
